@@ -112,7 +112,7 @@ const Profile = forwardRef((props, ref) => {
                             </motion.h2>
 
                             <motion.p className="text-primary-400 text-base sm:text-xl font-bold mt-0 sm:mt-2 leading-tight mb-6 sm:mb-6 " custom={2} variants={fadeUp}>
-                                Java Developer
+                                P R  O G R A M M E R
                             </motion.p>
 
                             <motion.p className="text-sm sm:text-lg text-neutral-300 text-justify" custom={3} variants={fadeUp}>

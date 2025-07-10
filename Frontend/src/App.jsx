@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Profile from './components/Profile';
 import Skills from './components/Skills';
-import ProjectsFromApi from './components/ProjectsFromApi';
+import ProjectsVerticalAlternating from './components/ProjectsVerticalAlternating';
 import Experience from './components/Experience';
 import EducationPage from './components/EducationPage';
 import Layout from './components/Layout';
@@ -77,7 +77,7 @@ function App() {
                             </div>
 
                             <div ref={sectionRefs.projects}>
-                                <ProjectsFromApi />
+                                <ProjectsVerticalAlternating />
                             </div>
 
                             <div ref={sectionRefs.experience}>
