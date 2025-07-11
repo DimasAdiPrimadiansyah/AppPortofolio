@@ -28,7 +28,7 @@ const ProjectsVerticalAlternating = () => {
     const [modalPhotos, setModalPhotos] = useState([]);
 
     return (
-        <section className="relative min-h-screen bg-profile-background text-white py-12 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden">
+        <section className="relative min-h-screen bg-profile-background text-white py-2 sm:py-12 px-4 sm:px-6 md:px-12 lg:px-20 overflow-hidden">
             {/* Background Blobs */}
             <div className="absolute inset-0 -z-10 pointer-events-none">
                 <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-blob" />

@@ -52,6 +52,7 @@ module.exports = {
             },
             animation: {
                 blob: 'blob 7s infinite',
+                "pulse-slow": "pulse 4s infinite",
             },
             // -- AKHIR PENAMBAHAN --
         },

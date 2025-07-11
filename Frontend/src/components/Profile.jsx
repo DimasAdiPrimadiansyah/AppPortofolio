@@ -139,12 +139,15 @@ const Profile = forwardRef((props, ref) => {
                                     ))}
                                 </div>
 
-                                <motion.button
+                                <motion.a
+                                    href="/images/profile/CV.pdf"
+                                    download
                                     className="min-w-max flex-shrink-0 px-3 py-1.5 sm:px-6 sm:py-3 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-xl font-semibold flex items-center space-x-2 hover:scale-105 transition-transform duration-300 text-xs sm:text-base"
                                 >
                                     <FiDownload className="w-4 h-4 sm:w-5 sm:h-5" />
                                     <span>Download CV</span>
-                                </motion.button>
+                                </motion.a>
+
                             </motion.div>
                         </div>
                     </motion.div>

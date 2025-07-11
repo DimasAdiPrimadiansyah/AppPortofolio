@@ -1,21 +1,21 @@
 // src/components/ProfileIntroScroll.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import ElasticLanyardCardAdvanced from './ElasticLanyardCardAdvanced';
 
 const ProfileIntroScroll = ({ onScrollDone }) => {
     const scrollRef = useRef(null);
     const { scrollYProgress } = useScroll({ container: scrollRef });
 
-    // Scroll progress logic
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
-        restDelta: 0.001
+        restDelta: 0.001,
     });
 
     const [scrollPercent, setScrollPercent] = useState(0);
     useEffect(() => {
-        const unsub = scrollYProgress.on("change", (v) => {
+        const unsub = scrollYProgress.on('change', (v) => {
             setScrollPercent(Math.round(v * 100));
             if (v >= 0.99) {
                 document.body.style.overflow = 'auto';
@@ -25,7 +25,6 @@ const ProfileIntroScroll = ({ onScrollDone }) => {
         return () => unsub();
     }, [scrollYProgress, onScrollDone]);
 
-    // Lock scroll at mount
     useEffect(() => {
         const prev = document.body.style.overflow;
         document.body.style.overflow = 'hidden';
@@ -48,6 +47,9 @@ const ProfileIntroScroll = ({ onScrollDone }) => {
 
     return (
         <div className="fixed inset-0 bg-black z-[100] overflow-hidden">
+            {/* 🎯 ID Card + Lanyard (dragable + animasi) */}
+            <ElasticLanyardCardAdvanced />
+
             {/* Konten Utama */}
             <motion.div className="absolute inset-0 flex items-center justify-center" style={{ scale, opacity }}>
                 <motion.div
@@ -130,7 +132,6 @@ const ProfileIntroScroll = ({ onScrollDone }) => {
                     </div>
                 </div>
             </motion.div>
-
 
             {/* Scrollable area */}
             <div ref={scrollRef} className="absolute inset-0 overflow-y-scroll z-20">

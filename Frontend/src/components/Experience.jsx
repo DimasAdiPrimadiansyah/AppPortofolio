@@ -8,7 +8,7 @@ import { useLanguage } from '../context/LanguageContext';
 const experiences = [
     {
         company: 'PT. Asaba Digital Innotech',
-        position: 'Desktop Application Developer',
+        position: 'Desktop Developer',
         period: 'Magang  | 2025',
         location: 'Tangerang, Banten',
         description:
